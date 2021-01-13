@@ -1,0 +1,275 @@
+package logika;
+
+
+/**
+ *  Class HerniPlan - třída představující mapu a stav adventury.
+ * 
+ *  Tato třída inicializuje prvky ze kterých se hra skládá:
+ *  vytváří všechny prostory,
+ *  propojuje je vzájemně pomocí východů 
+ *  a pamatuje si aktuální prostor, ve kterém se hráč právě nachází.
+ *
+ *@author     Michael Kolling, Lubos Pavlicek, Jarmila Pavlickova
+ *@version    pro školní rok 2014/2015
+ */
+public class HerniPlan {
+    
+    private Prostor aktualniProstor;
+    private Prostor viteznyProstor;
+    private Batoh batoh;
+    private boolean vitezstvi;
+    private boolean prohra;
+    private boolean nyni;
+    
+     /**
+     *  Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
+     *  Jako výchozí aktuální prostor nastaví halu.
+     */
+    public HerniPlan() {
+        zalozProstoryHry();
+        batoh = new Batoh(); // přidáme batoh v konstruktoru
+    }
+    
+    /**
+     *  Vytváří jednotlivé prostory a propojuje je pomocí východů.
+     *  Jako výchozí aktuální prostor nastaví domeček.
+     */
+    private void zalozProstoryHry() {
+        // vytvářejí se jednotlivé prostory
+        Prostor spaceship = new Prostor("spaceship","Nacházíš se na své kosmické lodi. Vidíš zde spoustu nepořádku způsobeného tvrdým přistáním. \n");
+        Prostor poust = new Prostor("poust", "Pošť je dnes vyjímečně klidná, ale horká. Člověk bez vody by zde nepřežil. V dáli vidíš dvě osoby.\n");
+        Prostor vesnice = new Prostor("vesnice","Vstupuješ do malinké vesničky uprostřed pouště. Kolem tebe domy uplácané z písku. Sám nevíš, jak to, že stojíds. Dostáváš se až na náměstí.\n");
+        Prostor spacemech = new Prostor("spacemech","Jedině ve SpaceMech nalezneš kvalitní materiály do robotů, lodí a tryskáčů.\n");
+        Prostor hospoda = new Prostor("hospoda","Hospoda v mechanickém stylu. Za barem hospodský a za stolem štamgast. Vzadu vidíš hrát kapelu Cantina Band. Právě hrají tvou oblíbenou písničku.\n");
+        Prostor novakovi = new Prostor("novakovi","Tohle je dům Nováků. Vstupuješ do předsíně a slyšíš, jak někdo sestupuje po schodech dolů.\n");
+        Prostor skladka = new Prostor("skladka","Stojíš před mříží, která tě dělí od skutečného harampádí. Vlevo je malá budka a vedle ní jě někdo.\n");
+        Prostor uvnitr_skladky = new Prostor("uvnitr_skladky","Všude kolem tebe je hromada starého materiálu, který by ti pomohl pomoci.\n");
+        Prostor most = new Prostor("most","Na mostě celkem fouká. Vidíš nějakého mimozemšťana, jak sleduje vodní hladinu.\n");
+        Prostor vodarna = new Prostor("vodarna","Uvnitř vodárny je strašný hluk. Sotva něco slyšíš. Zaznamenáš však, že někdo k tobě přichází.\n");
+        
+        
+        // přiřazují se průchody mezi prostory (sousedící prostory)
+        spaceship.setVychod(poust);
+        
+        poust.setVychod(vesnice);
+        poust.setVychod(spaceship);
+        
+        vesnice.setVychod(spacemech);
+        vesnice.setVychod(hospoda);
+        vesnice.setVychod(novakovi);
+        vesnice.setVychod(most);
+        vesnice.setVychod(poust);
+        vesnice.setVychod(skladka);
+        
+        hospoda.setVychod(vesnice);
+        
+        spacemech.setVychod(vesnice);
+        
+        skladka.setVychod(vesnice);
+        skladka.setVychod(uvnitr_skladky);
+        
+        novakovi.setVychod(vesnice);
+        
+        most.setVychod(vesnice);
+        most.setVychod(vodarna);
+        
+        vodarna.setVychod(most);
+        
+        uvnitr_skladky.setVychod(skladka);
+        
+        
+        // Vkládání věcí do prostoru
+        //****************************
+        
+        //Spaceship
+        Vec motor = new Vec("motor", false);
+        spaceship.vlozVec(motor);
+        
+        Vec generator = new Vec("generator", false);
+        spaceship.vlozVec(generator);
+        
+        Vec deset_kreditu = new Vec("10kreditu", true);
+        spaceship.vlozVec(deset_kreditu);
+        
+        Vec dvacet_kreditu = new Vec("20kreditu", true);
+        spaceship.vlozVec(dvacet_kreditu);
+        
+        Vec tricet_kreditu = new Vec("30kreditu", true);
+        spaceship.vlozVec(tricet_kreditu);
+        
+        Vec oko_robota = new Vec("okoRobota", true);
+        spaceship.vlozVec(oko_robota);
+        
+        Vec zlato = new Vec("zlato", true);
+        spaceship.vlozVec(zlato);
+        
+        Vec blaster = new Vec("blaster", true);
+        spaceship.vlozVec(blaster);
+        
+        Vec draty = new Vec("draty", true);
+        spaceship.vlozVec(draty);
+        
+        //Uvnitr skládky
+        Vec stator = new Vec("stator", true);
+        uvnitr_skladky.vlozVec(stator);
+        
+        Vec komutator = new Vec("komutator", true);
+        uvnitr_skladky.vlozVec(komutator);
+        
+        Vec karburator = new Vec("karburator", true);
+        uvnitr_skladky.vlozVec(karburator); 
+        
+        //Věci, které vlastní postavy
+        Vec plutonium = new Vec("plutonium", true);
+        Vec rotor = new Vec("rotor", true);
+        Vec turbo = new Vec("turbo", true);
+        Vec pivo = new Vec("pivo", true);
+        
+        
+            
+        
+        // Vkládání postav do prostoru
+        //***************************
+        
+        //Poust
+        Postava nomadLando = new Postava("nomadLando","NOMAD LANDO: Zdravím tě cizinče. \n" +
+                                                      "             Vítej na planetě Tatooine. \n"+
+                                                      "             Viděl jsem, jak tvá loď nekontrolovaně směřuje sem, ale naštěstí jsi nějak přistál. \n "+
+                                                      "             Předpokládám, že tě zachránil autopilot před smrtí. \n"+
+                                                      "             Podle toho kouře, který vycházel z tvé lodi tipuju, že se ti něco porouchalo. \n"+
+                                                      "             Kousek odtud je vesnice a tam najdeš potřebný materiál na opravu. \n"+
+                                                      "             Možná by se ti tohle mohlo hodit. plutonium \n"
+                                                      );
+        poust.vlozPostavu(nomadLando);
+        
+        Postava nomadOwen = new Postava("nomadOwen","NOMAD OWEN: Zdravím. \n" + 
+                                                    "            Podle rychlosti pádu a toho kouře, který šel z tvé lodi, tipuji, že ti selhal motor. \n"+ 
+                                                    "            Pokud ho budeš chtít opravit, budeš určitě potřebovat komutátor. \n"
+                                                    );
+        poust.vlozPostavu(nomadOwen);
+        
+        //Vesnice
+        Postava starenka = new Postava("starenka","STAŘENKA: Ahoj mládenče.\n"+
+                                                   "         Copak od takové staré báby jako jsem já chceš?\n"+
+                                                   "         Tebe nepoznávám. Musíš být nová tvář. Mohla bych ti něco o vesnici povědět. \n"+
+                                                   "         Žiji zde od svého narození a za ten můj krátký život se toho změnilo \n"+
+                                                   "         Původně vesnici tvořilo pár rodin, které se starali o harampádí, které opravovali a pak prodávali.\n"+
+                                                   "         Dnes tu však žije daleko více lidí a ze skladiště harampádí se stal zdroj technického materiálu do těch vašich lodí a tryskáčů. \n"+
+                                                   "         Většina zde žijících se už nevěnuje tolik opravám jako prodeji \n"+
+                                                   "         Můj syn pracuje ve SpaceMechu jako prodavač, tak pokud bys potřeboval nějaký materiál, určitě bude něco mít \n" );
+        vesnice.vlozPostavu(starenka);
+        
+        Postava kluk = new Postava("kluk","KLUK: Proč ten tryskáč nechce naskočit! Dopr***! \n"+
+                                           "     Jejda! Pardon pane, nevšiml jsem si vás. \n"+
+                                           "     Víte, chci vyhrát zdejší závod, a proto pracuji na svém tryskáči, ale nějak mi motor stále zlobí. \n"+
+                                           "     Musím ho opravit, protože bez funkčního a dobrého motru mám malou šanci vyhrát. \n"+
+                                           "     Poslední závod jsem prohrál právě kvůli němu - uprostřed závodu se mi zasek a přestal fungovat. \n"+
+                                           "     Při opravě jsem pak zjistil proč. Praskly mi dráty. Ale nějak nemůžu najít kvalitní dráty. \n"
+                                           );
+        vesnice.vlozPostavu(kluk);
+        
+        //Hospoda
+        Postava hospodsky = new Postava("hospodsky","HOSPODSKY: Zdravím. \n"+
+                                                     "          Mohu vám nabídnout jedině pivo Tooito. Tvrdé nám došlo \n"+
+                                                     "          Pivo Tooito vybábíme přímo zde ve vesnici a svou jedinečnou chuť má díky místní Vodárně \n"+
+                                                     "          Vodárna totiž generuje tu nejlepší vodu v této galaktické soustavě. Dáte si teda pivo Tooito? \n"
+                                                     );
+        hospoda.vlozPostavu(hospodsky);
+        
+        Postava stamgast = new Postava("stamgast","ŠTAMGAST: Mmmáám suuchoo v krrkuu. Potřebuju se něčeho napíít. \n");
+        
+        hospoda.vlozPostavu(stamgast);
+        
+        //SpaceMech
+        
+        Postava prodavac = new Postava("prodavac","PRODAVAČ: Dobrý den. Jistě vás zajímá jaké zboží zde máme \n"+
+                                                   "         Bohužel máme zde jen poslední kus rotoru za 30 kreditů a turba za 20 kreditů. \n"+
+                                                   "         Další materiál by měl přijít příští týden. \n"
+                                                   );
+        spacemech.vlozPostavu(prodavac);
+        
+        //Novákovi
+        
+        Postava novakova = new Postava("novakova","NOVÁKOVÁ: Panebože, vy nejste strážník! \n"
+                                                   );
+        novakovi.vlozPostavu(novakova);
+        
+        //Skládka
+        
+        Postava spravce = new Postava("spravce","SPRÁVCE: Ty, ty doufám, že nejsi zloděj! \n"
+        );
+        skladka.vlozPostavu(spravce);
+        
+        //Most
+        
+        Postava mimozemstan = new Postava("mimozemstan","MIMOZEMŠŤAN: \n"
+        );
+        most.vlozPostavu(mimozemstan);
+        
+        //Vodárna
+        
+        Postava pracovnik = new Postava("pracovnik","PRACOVNÍK: \n"
+        );
+        vodarna.vlozPostavu(pracovnik);
+        
+        aktualniProstor = spaceship;  // hra začíná v domečku
+    }
+    
+    /**
+     *  Metoda vrací odkaz na aktuální prostor, ve ktetém se hráč právě nachází.
+     *
+     *@return     aktuální prostor
+     */
+    
+    public Prostor getAktualniProstor() {
+        return aktualniProstor;
+    }
+    
+    /**
+     *  Metoda nastaví aktuální prostor, používá se nejčastěji při přechodu mezi prostory
+     *
+     *@param  prostor nový aktuální prostor
+     */
+    public void setAktualniProstor(Prostor prostor) {
+       aktualniProstor = prostor;
+    }
+    
+   
+    public Batoh getBatoh() //
+    {
+        return batoh;
+    }
+    
+    /**
+     * Metoda vrací odkaz na viztezstvi
+     * 
+     * @return vitezstvi
+     */
+    public boolean jeVitezstvi()
+    {
+        vitezstvi = false;
+        return vitezstvi;
+    }
+    
+    public void setVitezstvi()
+    {
+        this.vitezstvi = nyni;
+    }
+    
+    
+    /**
+     * Metoda vrací odkaz na prohru
+     * 
+     * @return prohra
+     */
+    public boolean jeProhra()
+    {
+        prohra = false;
+        return prohra;
+    }
+    
+    public void setProhra()
+    {
+        this.prohra = nyni;
+    }
+}

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ setUp()
+comment1.params=
+comment1.target=void\ testVlozeniVybrani()
+comment2.params=
+comment2.target=void\ testJePlatnyPrikaz()
+comment3.params=
+comment3.target=void\ testNazvyPrikazu()
+numComments=4

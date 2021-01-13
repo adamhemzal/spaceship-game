@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Batoh()
+comment0.text=\r\n\ \ Konstruktor\ t\u0159\u00EDdy\ Batoh\r\n
+comment1.params=
+comment1.target=boolean\ jeBatohVolny()
+comment1.text=\r\n\ Metoda\ zjist\u00ED,\ zda\ je\ v\ batohu\ m\u00EDsto\r\n\ \r\n\ @return\ true\ -\ batoh\ je\ voln\u00FD\ |\ false\ -\ batoh\ je\ pln\u00FD\r\n
+comment2.params=neco
+comment2.target=boolean\ vlozVec(Vec)
+comment2.text=\r\n\ Metoda\ vlo\u017E\u00ED\ v\u011Bc,\ pokud\ je\ batoh\ voln\u00FD\ a\ pokud\ je\ v\u011Bc\ p\u0159enositeln\u00E1\r\n\ \r\n\ @return\ true\ -\ v\u011Bc\ je\ p\u0159enositeln\u00E1\ a\ batoh\ je\ voln\u00FD\ |\ false\ -\ batoh\ je\ pln\u00FD\ a\ nebo\ v\u011Bc\ nen\u00ED\ p\u0159enositeln\u00E1\r\n
+comment3.params=nazev
+comment3.target=Vec\ vyhodVec(java.lang.String)
+comment3.text=\r\n\ Metoda\ odstran\u00ED\ v\u011Bc\ z\ batohu.\ Pokud\ je\ v\ batohu\ zadan\u00E1\ v\u011Bc,\ sma\u017Ee\ ji\ (pou\u017E\u00EDv\u00E1\ se\ v\ p\u0159\u00EDkazu\ Odhod)\r\n\ \r\n\ @return\ vyhozena\r\n
+comment4.params=
+comment4.target=java.lang.String\ coJeVBatohu()
+comment4.text=\r\n\ Metoda\ zjist\u00ED,\ jak\u00E9\ v\u011Bci\ jsou\ v\ batohu\r\n\ \r\n\ @return\ seznam\ v\u011Bc\u00ED\ v\ batohu\r\n
+comment5.params=nazev
+comment5.target=Vec\ getVec(java.lang.String)
+comment5.text=\r\n\ Metoda\ najde\ v\u011Bc,\ kterou\ chceme\ z\u00EDskat\r\n\ \r\n\ @return\ v\u011Bc\r\n
+comment6.params=nazev
+comment6.target=boolean\ jeVBatohuVec(java.lang.String)
+comment6.text=\r\n\ Meto\ zjist\u00ED,\ zda\ je\ v\ batohu\ v\u011Bc\ (pou\u017E\u00EDv\u00E1\ se\ v\ p\u0159\u00EDkazu\ Dej)\r\n\ \r\n\ @return\ true\ -\ batoh\ obsahuje\ v\u011Bc\ |\ false\ -\ batoh\ neobsahuje\ v\u011Bc\r\n
+comment7.params=
+comment7.target=int\ getKapacitaBatohu()
+comment7.text=\r\n\ Metoda\ zjist\u00ED\ kapacitu\ batohu\r\n\ \r\n\ @return\ kapacita\r\n
+numComments=8

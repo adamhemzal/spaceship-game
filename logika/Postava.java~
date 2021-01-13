@@ -1,0 +1,110 @@
+/* Soubor je ulozen v kodovani UTF-8.
+ * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
+package logika;
+
+
+
+
+
+/*******************************************************************************
+ * Instance třídy Postava implementuje postavy ve hře (jejich jméno a proslovy)
+ *
+ * @author    Adam Hemžal
+ * @version   0.00.000
+ */
+public class Postava
+{
+    private String jmeno;
+    private String proslovPred; //proslov pred vymenou
+    private String proslovPo; //proslov po vymene
+    private String recChce; //co řekne, když nabizenou vec chce
+    private String recNechce; //co řekne, kdyz nabizenou vec nechce
+    private Vec chce; // věc, kterou chce postava
+    private Vec drzi; //věc, kterou dostane hráč po výměně (věc, kterou postava má)
+    private boolean probehlaVymena;
+    private boolean probehlRozhovor;
+    
+    //##########################################################################
+    //== KONSTRUKTORY A TOVÁRNÍ METODY =========================================
+
+    /***************************************************************************
+     *  Konstruktor Postavy, která jenom mluví
+     *
+     */
+    public Postava(String jmeno, String proslov)
+    {
+        this.jmeno = jmeno;
+        this.proslovPred = proslovPred;
+        this.probehlRozhovor = false;
+        proslovPred = proslov;
+    }
+    
+    public void nastavVymenu(Vec chce, Vec drzi, String proslovPo)
+    {
+        this.chce = chce;
+        this.drzi = drzi;
+        this.proslovPo = proslovPo;
+    }
+    
+    
+    /**
+     * Metoda vrací jméno postavy
+     * 
+     * @return - jméno
+     */
+    public String getJmeno()
+    {
+        return jmeno;
+    }
+
+  
+
+   
+    /**
+     * Metoda vrací první proslov postavy
+     * 
+     * @return - proslov
+     *
+    public String getProslov()
+    {
+        return proslov;
+    }
+    */
+    
+    public String getProslovPo()
+    {
+        return proslovPo;
+    }
+   
+    public Vec getDrzi()
+    {
+        return drzi;
+    }
+    
+    /**
+     * Metoda 
+     */
+    public Vec getChce()
+    {
+        return chce;
+    }
+    
+    public boolean getProbehlRozhovor()
+    {
+        return probehlRozhovor;
+    }
+    
+    
+    
+    
+    //
+    //     /********************************************************************
+    //      * Testovací metoda.
+    //      */
+    //     public static void test()
+    //     {
+    //         Postava instance = new Postava();
+    //     }
+    //     /** @param args Parametry příkazového řádku - nepoužívané. */
+    //     public static void main(String[] args)  {  test();  }
+}

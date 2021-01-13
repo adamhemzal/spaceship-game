@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=nazev\ prenositelna
+comment0.target=Vec(java.lang.String,\ boolean)
+comment0.text=\r\n\ \ Konstruktor\ t\u0159\u00EDdy\ Vec\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNazev()
+comment1.text=\r\n\ Metoda\ vrac\u00ED\ n\u00E1zev\ v\u011Bci\r\n\ \r\n\ @returm\ n\u00E1zev\r\n
+comment2.params=
+comment2.target=boolean\ isPrenositelna()
+comment2.text=\r\n\ Metoda\ vrac\u00ED\ p\u0159enositelnost\ v\u011Bci\r\n\ \r\n\ @return\ p\u0159enositeln\u00E1\ -\ true\ nebo\ false\r\n
+comment3.params=neco
+comment3.target=boolean\ vlozVec(Vec)
+comment3.text=\r\n\ Metoda\ vlo\u017E\u00ED\ v\u011Bc\ do\ lodi\ (pou\u017E\u00EDv\u00E1\ se\ v\ p\u0159\u00EDkazu\ Vloz)\r\n\ \r\n\ @param\ n\u00E1zev\ n\u011Bci,\ kterou\ cheme\ vlo\u017Eit\r\n\ @return\ true\ -\ vlo\u017E\u00ED\ se\ v\u011Bc\ |\ false\ -\ nevlo\u017E\u00ED\ se\ v\u011Bc\r\n
+comment4.params=
+comment4.target=int\ mnozstviVeci()
+comment4.text=\r\n\ Metoda\ vrac\u00ED\ po\u010Det\ v\u011Bc\u00ED\ vlo\u017Een\u00FDch\ v\ lodi\r\n\ \r\n\ @return\ mno\u017Estv\u00ED\ v\u011Bc\u00ED\r\n
+comment5.params=
+comment5.target=java.lang.String\ getVeci()
+comment5.text=\r\n\ Metoda\ vr\u00E1t\u00ED\ seznam\ v\u011Bc\u00ED\ ulo\u017Een\u00FDch\ v\ kosmick\u00E9\ lodi\ (pou\u017E\u00EDv\u00E1\ se\ v\ p\u0159\u00EDkazu\ ObsahLodi)\r\n\ \r\n\ @return\ v\u011Bci\ v\ kosmick\u00E9\ lodi\r\n
+comment6.params=
+comment6.target=int\ getKapacitaLodi()
+comment6.text=\r\n\ Metoda\ zjist\u00ED\ kapacitu\ centr\u00E1ln\u00EDho\ pohonu\ lodi\r\n\ \r\n\ @return\ kapacita\r\n
+numComments=7

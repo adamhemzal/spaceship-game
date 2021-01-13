@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=plan\ batoh
+comment0.target=PrikazVloz(HerniPlan,\ Batoh)
+comment0.text=\r\n\ \ Konstruktor\ t\u0159\u00EDdy\r\n
+comment1.params=parametry
+comment1.target=java.lang.String\ proved(java.lang.String[])
+comment1.text=\r\n\ Metoda\ umo\u017En\u00ED\ hr\u00E1\u010Di\ vlo\u017Eit\ zadan\u00FD\ p\u0159edm\u011Bt\ z\ batohu\ do\ lodi.\ Hr\u00E1\u010D\ v\u0161ak\ mus\u00ED\ b\u00FDt\ v\ prostoru\ spaceship,\r\n\ aby\ mohl\ p\u0159\u00EDkaz\ pou\u017E\u00EDt.\ \r\n\ \r\n\ @return\ zpr\u00E1va\ o\ proveden\u00ED\ p\u0159\u00EDkazu.\ Vyp\u00ED\u0161e\ jak\u00FD\ p\u0159edm\u011Bt\ byl\ vlo\u017Een\ do\ lodi\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNazev()
+comment2.text=\r\n\ Metoda\ vrac\u00ED\ n\u00E1zev\ p\u0159\u00EDkazu\ (slovo\ kter\u00E9\ pou\u017E\u00EDv\u00E1\ hr\u00E1\u010D\ pro\ jeho\ vyvol\u00E1n\u00ED)\r\n\ \r\n\ @return\ nazev\ prikazu\r\n
+numComments=3

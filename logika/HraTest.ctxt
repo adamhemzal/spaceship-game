@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ setUp()
+comment0.text=\r\n\ Metoda\ se\ provede\ p\u0159ed\ spu\u0161t\u011Bn\u00EDm\ ka\u017Ed\u00E9\ testovac\u00ED\ metody.\ Pou\u017E\u00EDv\u00E1\ se\r\n\ k\ vytvo\u0159en\u00ED\ tzv.\ p\u0159\u00EDpravku\ (fixture),\ co\u017E\ jsou\ datov\u00E9\ atributy\ (objekty),\r\n\ s\ nimi\u017E\ budou\ testovac\u00ED\ metody\ pracovat.\r\n
+comment1.params=
+comment1.target=void\ tearDown()
+comment1.text=\r\n\ \u00DAklid\ po\ testu\ -\ tato\ metoda\ se\ spust\u00ED\ po\ vykon\u00E1n\u00ED\ ka\u017Ed\u00E9\ testovac\u00ED\ metody.\r\n
+comment2.params=
+comment2.target=void\ testPrubehHryVyhra()
+comment2.text=\r\n\ Testuje\ pr\u016Fb\u011Bh\ hry,\ po\ zavol\u00E1n\u00ED\ ka\u017Ed\u011Bho\ p\u0159\u00EDkazu\ testuje,\ zda\ hra\ kon\u010D\u00ED\r\n\ a\ v\ jak\u00E9\ aktu\u00E1ln\u00ED\ m\u00EDstnosti\ se\ hr\u00E1\u010D\ nach\u00E1z\u00ED.\r\n\ P\u0159i\ dal\u0161\u00EDm\ roz\u0161i\u0159ov\u00E1n\u00ED\ hry\ doporu\u010Dujeme\ testovat\ i\ jak\u00E9\ v\u011Bci\ nebo\ osoby\r\n\ jsou\ v\ m\u00EDstnosti\ a\ jak\u00E9\ v\u011Bci\ jsou\ v\ batohu\ hr\u00E1\u010De.\r\n\ \r\n
+comment3.params=
+comment3.target=void\ testPrubehHryProhra()
+numComments=4

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=platnePrikazy
+comment0.target=PrikazPomoc(SeznamPrikazu)
+comment0.text=\r\n\ \ Konstruktor\ t\u0159\u00EDdy\r\n
+comment1.params=parametry
+comment1.target=java.lang.String\ proved(java.lang.String[])
+comment1.text=\r\n\ Metoda\ vyp\u00ED\u0161e\ seznam\ p\u0159\u00EDkaz\u016F,\ kter\u00E9\ m\u016F\u017Eeme\ ve\ h\u0159e\ prov\u00E9st\r\n\ \r\n\ @return\ seznam\ p\u0159\u00EDkaz\u016F\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNazev()
+comment2.text=\r\n\ Metoda\ vrac\u00ED\ n\u00E1zev\ p\u0159\u00EDkazu\ \r\n\ \r\n\ @return\ n\u00E1zev\ p\u0159\u00EDkazu\r\n
+numComments=3

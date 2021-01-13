@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=HerniPlan()
+comment0.text=\r\n\ \ Konstruktor\ kter\u00FD\ vytv\u00E1\u0159\u00ED\ jednotliv\u00E9\ prostory\ a\ propojuje\ je\ pomoc\u00ED\ v\u00FDchod\u016F.\r\n\ \ Jako\ v\u00FDchoz\u00ED\ aktu\u00E1ln\u00ED\ prostor\ nastav\u00ED\ halu.\r\n
+comment1.params=
+comment1.target=void\ zalozProstoryHry()
+comment1.text=\r\n\ \ Vytv\u00E1\u0159\u00ED\ jednotliv\u00E9\ prostory\ a\ propojuje\ je\ pomoc\u00ED\ v\u00FDchod\u016F.\r\n\ \ Jako\ v\u00FDchoz\u00ED\ aktu\u00E1ln\u00ED\ prostor\ nastav\u00ED\ dome\u010Dek.\r\n
+comment2.params=
+comment2.target=Prostor\ getAktualniProstor()
+comment2.text=\r\n\ \ Metoda\ vrac\u00ED\ odkaz\ na\ aktu\u00E1ln\u00ED\ prostor,\ ve\ ktet\u00E9m\ se\ hr\u00E1\u010D\ pr\u00E1v\u011B\ nach\u00E1z\u00ED.\r\n\r\n@return\ \ \ aktu\u00E1ln\u00ED\ prostor\r\n
+comment3.params=prostor
+comment3.target=void\ setAktualniProstor(Prostor)
+comment3.text=\r\n\ \ Metoda\ nastav\u00ED\ aktu\u00E1ln\u00ED\ prostor,\ pou\u017E\u00EDv\u00E1\ se\ nej\u010Dast\u011Bji\ p\u0159i\ p\u0159echodu\ mezi\ prostory\r\n\r\n@param\ \ prostor\ nov\u00FD\ aktu\u00E1ln\u00ED\ prostor\r\n
+comment4.params=
+comment4.target=boolean\ jeVitezstvi()
+comment4.text=\r\n\ Metoda\ vrac\u00ED\ odkaz\ na\ viztezstvi\r\n\ \r\n\ @return\ vitezstvi\r\n
+comment5.params=nyni
+comment5.target=void\ setVitezstvi(boolean)
+comment5.text=\r\n\ Metoda\ nastav\u00ED\ hodnotu\ v\u00EDtezstv\u00ED\ (pou\u017E\u00EDv\u00E1\ se\ v\ p\u0159\u00EDkazu\ Zapnout)\r\n\ \r\n\ @return\ odkaz\ na\ v\u00EDte\u017Estv\u00ED,\ kter\u00E9\ se\ p\u0159ep\u00ED\u0161e\ na\ true\ nebo\ false\ podle\ pot\u0159eby\r\n
+comment6.params=
+comment6.target=boolean\ jeProhra()
+comment6.text=\r\n\ Metoda\ vrac\u00ED\ odkaz\ na\ prohru\r\n\ \r\n\ @return\ prohra\r\n
+comment7.params=nyni
+comment7.target=void\ setProhra(boolean)
+comment7.text=\r\n\ Metoda\ nastav\u00ED\ hodnotu\ prohry\ (pou\u017E\u00EDv\u00E1\ se\ v\ p\u0159\u00EDkazu\ Zapnout)\r\n\ \r\n\ @return\ odkaz\ na\ prohru,\ kter\u00E1\ se\ p\u0159ep\u00ED\u0161e\ na\ true\ nebo\ false\ podle\ pot\u0159eby\r\n
+numComments=8

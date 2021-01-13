@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=plan\ batoh
+comment0.target=PrikazDej(HerniPlan,\ Batoh)
+comment0.text=\r\n\ \ Konstruktor\ t\u0159\u00EDdy\r\n\ \ \r\n\ \ @param\ plan,\ batoh\r\n
+comment1.params=parametry
+comment1.target=java.lang.String\ proved(java.lang.String[])
+comment1.text=\r\n\ Metoda\ umo\u017En\u00ED\ hr\u00E1\u010Di\ d\u00E1t\ p\u0159edm\u011Bt\ z\ batohu\ postav\u011B.\ Metoda\ kontroluje,\ zda\ se\ postava\ nach\u00E1z\u00ED\ v\ aktu\u00E1ln\u00EDm\ prostoru,\r\n\ pot\u00E9\ zda\ m\u00E1\ hr\u00E1\u010D\ v\ batohu\ vym\u011B\u0148ovanou\ v\u011Bc,\ zda\ chce\ postava\ vym\u011B\u0148ovat,\ zda\ postava\ chce\ nab\u00EDzenou\ v\u011Bc\ a\ zda\ postava\ v\u011Bc\ dr\u017E\u00ED.\r\n\ \r\n\ @return\ zpr\u00E1va\ o\ proveden\u00ED\ p\u0159\u00EDkazu.\ Vyp\u00ED\u0161e\ komu\ byl\ d\u00E1n\ p\u0159edm\u011Bt\ a\ jak\u00FD\ p\u0159edm\u011Bt.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNazev()
+comment2.text=\r\n\ Metoda\ vr\u00E1t\u00ED\ n\u00E1zev\ p\u0159\u00EDkazu\ (slovo,\ kter\u00E9\ se\ pou\u017E\u00EDv\u00E1\ p\u0159i\ jej\u00EDm\ vol\u00E1n\u00ED)\r\n\ \r\n\ @return\ n\u00E1zev\ p\u0159\u00EDkazu\r\n
+numComments=3
